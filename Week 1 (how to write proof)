@@ -1,0 +1,115 @@
+1.Are you starting the right way?
+1.1 
+what assumptions are given to you and what statement needs to be derived.
+the first paragraph of your proof should include a restatement of the assumptions given and what needs to be
+derived. Unpack the definitions of technical terms if appropriate.
+1.2
+Another important component of the first paragraph is stating your general proof strategy
+(e.g. proof by contradiction, proof by induction, etc.) For proofs by contradiction, explicitly negate
+the statement that you are trying to prove and assume it. For proofs by contrapositive, the
+contrapositive of the statement should be explicitly laid out. For proofs by induction, the parameter
+being inducted on should be clear.
+
+2.Did you read your proof out loud?
+Your proof should have a good flow and should be easy to read out loud even with the mathematical
+notation interspersed in the sentences. In particular, the mathematical notation you use or the
+diagrams you draw should not break the flow.
+
+3.Is the purpose of every sentence clear?
+The purpose of every sentence should be clear as you are reading it.
+A common example that violates this point is to make a statement without clarifying whether it follows from the previous statements or
+assumptions, or whether it is a statement that will be proved later on.
+With this in mind, whenever you write a sentence, make sure that it is clear if the sentence is
+(i) an assumption, (ii) a statement that follows from or combines previously established statements
+or assumptions, (iii) a claim that will be proved later, (iv) a sentence setting up a goal, (v) a sentence
+introducing a new variable, terminology, definition etc. (vi) part of an example or illustration, (vii) a
+digression, or (viii) something else.
+A strategy that helps a lot is to set up goals whenever you can and say what you will do before
+doing it.
+
+4.Are you giving the right level of detail?
+To sum up, keep readers in mind and make your proof understandable to them.
+
+5.Should you break up your proof?
+When you first learn programming, one thing that will be emphasized over and over again is the
+value of breaking up your problem into smaller parts and using lots of helper functions. If you
+write a function that is too long or does more than one task, that is a good indication that you
+should consider breaking it up into smaller helper functions. Liberal use of helper functions makes
+your program easier to understand and debug.
+In the above sense, mathematical proofs are similar to computer programs. Your proof should
+be divided up into lemmas and/or claims when appropriate. This will make the proof much easier
+to understand and it will be easier to spot and fix any potential errors.
+If you are making arguments for multiple statements (to be combined later), but you are not
+using lemmas or claims, the arguments should be clearly marked and separated into different
+paragraphs. Whether you use lemmas/claims or not, your proof should always be clearly organized.
+4According to Steven Pinker, a cognitive scientist, psychologist, linguist, and a popular science author, the biggest
+reason why many intelligent people write very poorly is “the curse of knowledge”. People have a hard time imagining
+what it is like for someone else to not know something that they know.
+
+6.Does your proof type-check?
+Similar to programming, every mathematical object has a type (e.g. it could be an integer,
+a set, a function, etc.). And as in programming, the type of an object determines what kind of
+operations you can apply to the object. For example, you can add an element to a set, but you
+cannot add an element to a function. If you do not respect these constraints, we say that your
+argument does not type-check. A type-checking error often leads to a nonsensical sentence (even
+though the author may not realize this).
+With these in mind, make sure that your proofs always type-check. You must act as a compiler
+to find anything that might violate type constraints. In order to make this easier, whenever you
+learn about a new definition, make a note of the type of the object being defined. This is one of
+the most important parts of a definition. And when referencing an object in your proof, be aware
+of its type and make sure that your proof type-checks.
+In addition to the above, remember that all the variables in your proofs should be introduced
+properly. In particular, it should be clear if a variable represents an arbitrary object (e.g. in the
+context of a “for all” quantifier), a specific object known to exist (e.g. in the context of a “there
+exists” quantifier), or something else (e.g. a specific value). In all cases, the variable must have a
+specific type, and it should be clear what the type is.
+Lastly, here is a suggestion to keep in mind. If in a sentence you are referring to a variable,
+consider preceding the variable with its type if you feel that this makes things clearer and does
+not add too much redundancy. For example, if x and y are variables referring to strings, you can
+consider changing a sentence like “Concatenating x and y...” to “Concatenating string x and string
+y...”.
+
+7.Are your references clear?
+As you develop an argument in a proof, you will want to refer back to (and use) a previously
+established statement or an assumption. Implicitly using previous statements or assumptions can
+make it hard to follow the logic of the proof and put unnecessary burden on the reader. Therefore,
+avoid implicit references and make sure it is clear which part(s) of the proof you are using to
+establish the current step of your proof. Whenever you make a reference, you want it to be very
+easy for the reader to spot the thing that is being referred to. For example, if there is an important
+equation that will be referenced later on in the proof, it is a good idea to put that equation on a
+separate line and label it. This way, you can use the equation’s label to refer to it, and the fact
+that it is on a separate line by itself will make it very easy for the reader to identify it.
+In addition to the above, please be careful when you use a word like “it”, “this”, or “these” in
+your proof. While you are writing your proof, when you use such a word, you know perfectly well
+what that word refers to in the proof. However, ask yourself whether it would also be perfectly
+clear to the reader. In general, it is a good idea to try to avoid such words as much as possible,
+even if this means a certain level of repetitiveness is introduced in the used words.
+
+8.Where are you using the assumptions?
+When you are asked to write a proof, you are usually given certain assumptions that you take as
+true (which is your starting point), and you have a target statement that you want to derive. As
+pointed out in the “Are you starting the right way?” section above, it helps you and the reader to
+lay out explicitly what the given assumptions are, and what the statement that needs to be derived
+is. Once your proof is complete, ask yourself where in the proof the assumptions are being used.
+If it turns out that you are not using a given assumption, you should raise your alertness level and
+check: is the statement even true without that assumption? (There may be some exceptions, but
+almost always, the answer will be no.) If it is not true, and you do not use the assumption in your
+proof, then your proof is wrong.
+When someone reads your proof to verify it, they will be trying to spot where the assumptions
+are used in the proof. This is a quick sanity check that the proof is not missing an essential
+component. In order to make this check easy for the reader (and also for yourself), you should
+make clear in your write-up where and how the assumptions are being used in your argument. In
+the rare case that a given assumption is not needed for the proof, mention this explicitly.
+
+9.Is ‘proof idea’ a good idea?
+As mentioned before, a proof is an argument that convinces the reader that a certain statement is
+true. After reading the proof, the reader may walk away with a clear and intuitive understanding
+of why the statement is true. Or, they may not, even if they are perfectly convinced that the
+statement is indeed true.
+We do not want to get into a philosophical discussion about what it means to understand why
+something is true. But hopefully we can agree that certain proofs have more explanatory content
+than others.
+It is better to write proofs that have strong explanatory content, especially when that quality
+makes the proof easier to verify. For this reason, you should consider preceding your proof by a
+“Proof Idea” section if the motivation/intuition behind the proof is not transparent from the proof
+or if you feel that such an addition would help the reader understand the proof more easily.
